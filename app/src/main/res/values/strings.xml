@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BalinaSoftTest</string>
     <string name="email">Email</string>
-    <string name="email_hint"><font size="14">введите email</font></string>
+    <string name="email_hint">введите email</string>
     <string name="password">Пароль</string>
     <string name="password_hint">введите пароль</string>
     <string name="registration">Регистрация</string>
