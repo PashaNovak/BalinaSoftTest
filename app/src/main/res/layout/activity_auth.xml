@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/r_auth_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_logo_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_logo_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_logo_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_logo_top" />
+
+    <TextView
+        android:id="@+id/error_validation_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:text="@string/email_is_empty"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/default_big_text_size"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/email_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_email_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <TextView
+        android:id="@+id/email_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_view_margin"
+        android:text="@string/email"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/helvetica_neue_cyr_roman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_email_top" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/email_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_tv">
+
+        <AutoCompleteTextView
+            android:id="@+id/email_actv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress|textAutoCorrect"
+            android:paddingBottom="@dimen/default_padding"
+            android:textColor="@color/color_white"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:fontFamily="@font/helvetica_neue_cyr_medium"
+            android:theme="@style/DefaultEditTextStyle" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/password_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/text_view_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/password"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/default_text_size"
+        android:fontFamily="@font/helvetica_neue_cyr_roman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_til" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_tv"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/color_white">
+
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:fontFamily="@font/helvetica_neue_cyr_medium"
+            android:paddingBottom="@dimen/default_padding"
+            android:textColor="@color/color_white"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:theme="@style/DefaultEditTextStyle" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_btn_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <Button
+        android:id="@+id/reg_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:background="@drawable/btn_registration_bg"
+        android:text="@string/registration"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/default_big_text_size"
+        android:fontFamily="@font/helvetica_neue_cyr_medium"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_btn_top" />
+
+</android.support.constraint.ConstraintLayout>
