@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".mvp.presentation.view.implementations.AuthActivity"
+            android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait"/>
         <activity android:name=".mvp.presentation.view.implementations.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

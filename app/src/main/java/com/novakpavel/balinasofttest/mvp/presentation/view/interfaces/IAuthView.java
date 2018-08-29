@@ -6,4 +6,5 @@ import com.novakpavel.balinasofttest.mvp.presentation.view.interfaces.base.IBase
 
 public interface IAuthView extends IBaseView {
     void showErrorMessage(@NonNull String errorMessage);
+    void hideErrorMessage();
 }
